@@ -28,6 +28,12 @@ list_of_files = [
           
           f"src/{package_name}/components/__init__.py",
 
+          "tests/__init__.py",
+          
+          "tests/unit/__init__.py",
+          
+          "tests/integration/__init__.py",
+
           "configs/config.yaml",
 
           "dvc.yaml" ,                                         ## for data version control (dvc) pipeline
@@ -66,7 +72,7 @@ for filepath in list_of_files:
         
         logging.info(f"Creating directory : {file_dir} for file : {filename}")
 
-    if (not os.path.exists(filepath)) or (os.path.getsize(filepath) == 0):
+    if (not os.path.exists(filepath)) or (os.path.getsize(filepath) == 0): ## this is to prevent overiding of files
         
         with open(filepath,"w") as f:
             pass                            ## create an empty file
