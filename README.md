@@ -1,1 +1,1 @@
-# Deep Classifier Project
+# Deep Learning Template
